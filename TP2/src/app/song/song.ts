@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-song',
   imports: [],
   templateUrl: './song.html',
-  styleUrl: './song.css'
+  styleUrl: '../../styles.css'
 })
-export class Song {
+export class SongComponent {
 
 }

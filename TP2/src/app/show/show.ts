@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-show',
   imports: [],
   templateUrl: './show.html',
-  styleUrl: './show.css'
+  styleUrl: '../../styles.css'
 })
-export class Show {
+export class ShowComponent {
 
 }

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+      Styles globaux (Il n'y a pas de style spécifique par page)
+▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+*/
+
+body{
+    background-color:black;
+    background-image: url("/public/images/wallpaper.png");
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+main{
+    margin:20px 0px 20px 0px;
+    background-color:rgba(0,0,0,0.7);
+    padding-bottom:30px;
+}
+
+header,footer{
+    background-color:rgb(131, 122, 255);
+    color:white;
+}
+
+footer{
+    position:fixed;
+    bottom:0px;
+}
+
+a, a:link, a:active, a:visited{
+    color:inherit;
+    text-decoration: inherit;
+}
+
+header h1, header h2{
+    font-family:Calibri;
+    font-weight:bold;
+    padding-left:10px;
+}
+
+header h1, header h2, footer p{
+    margin:0px;
+}
+
+.nav:hover{
+    background-color:white;
+    color:#997aff;
+}
+
+.artist{
+    border:white solid 3px;
+    border-radius:10px;
+    padding:10px;
+}
+
+.artist h4{
+    font-size:1em;
+    font-weight:bold;
+}
+
+.artist img{
+    border-radius:5px;
+}

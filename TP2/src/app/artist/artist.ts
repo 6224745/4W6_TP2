@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-artist',
   imports: [],
   templateUrl: './artist.html',
-  styleUrl: './artist.css'
+  styleUrl: '../../styles.css'
 })
-export class Artist {
+export class ArtistComponent {
 
 }
