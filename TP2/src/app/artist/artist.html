@@ -1,6 +1,6 @@
 <main class="container">
 	<div class="row">
-		<div class="col-3 p-3" *ngIf="spotifyservice.spotifyToken != null">
+		<div class="col-3 p-3" *ngIf="spotiService.spotifyToken != null">
 		  <h3>Ajouter un artiste</h3>
 		    <form>
 		        <div class="form-group mb-2">
@@ -14,12 +14,12 @@
 		<div class="col p-3 text-center">
 		    <h2>Vos artistes</h2>
 		    <div class="row">
-			    <div class="col-3 p-1" *ngFor="let a of tabArtist">
+			    <div class="col-3 p-1" *ngFor="let ar of tabArtist">
 			        <div class="artist">
-				        <h4>{{a.name}}</h4>
-				        <img [src]="a.imageUrl" [alt]="a.name" class="img-fluid">
-				        <a><button class="btn btn-light form-control mt-1">Concerts</button></a>
-				        <a><button class="btn btn-light form-control mt-1">Albums</button></a>
+				        <h4>{{ar.name}}</h4>
+				        <img [src]="ar.imageUrl" [alt]="ar.name" class="img-fluid">
+				        <button class="btn btn-light form-control mt-1">Concerts</button>
+				        <button class="btn btn-light form-control mt-1" [routerLink]="['/album', ar.name, ar.id]">Albums</button>
 			        </div>
 			    </div>
 		    </div>

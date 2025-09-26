@@ -8,6 +8,7 @@ export const routes: Routes = [
     {path: "", redirectTo: "/artist", pathMatch: "full"},
     {path: "artist", component: ArtistComponent},
     {path: "album", component: AlbumComponent},
+    {path: "album/:artistName/:artistId", component: AlbumComponent},
     {path: "show", component: ShowComponent},
     {path: "song", component: SongComponent},
 ];

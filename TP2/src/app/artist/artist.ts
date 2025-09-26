@@ -17,15 +17,15 @@ export class ArtistComponent {
   artiste?: Artist;
   tabArtist: Artist[] = [];
 
-  constructor(public spotifyservice: SpotifyService) {}
+  constructor(public spotiService: SpotifyService) {}
 
   ngOnInit() {
-    this.spotifyservice.connect();
+    this.spotiService.connect();
     this.loadFavoriteArtists();
   }
 
   async getArtist(): Promise<void> {
-    this.artiste = await this.spotifyservice.getArtist(this.artistName);
+    this.artiste = await this.spotiService.getArtist(this.artistName);
     if(this.artiste)
     {
       const existArtist = this.tabArtist.find(a => a.id == this.artiste?.id);
