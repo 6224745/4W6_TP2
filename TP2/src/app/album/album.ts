@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: '../../styles.css'
 })
 export class AlbumComponent {
-  artistID: string | null = null;
+  artistId: string | null = null;
   artistName: string | null = null;
   tabAlbums: Album[] = [];
 
@@ -21,11 +21,11 @@ export class AlbumComponent {
   ngOnInit(): void {
     this.spotiService.connect();
     this.artistName = this.route.snapshot.paramMap.get("artistName");
-    this.artistID = this.route.snapshot.paramMap.get("artistId");
+    this.artistId = this.route.snapshot.paramMap.get("artistId");
     this.getAlbums();
   }
 
   async getAlbums(): Promise<void>{
-    this.tabAlbums = await this.spotiService.getAlbums(this.artistID)
+    this.tabAlbums = await this.spotiService.getAlbums(this.artistId)
   }
 }

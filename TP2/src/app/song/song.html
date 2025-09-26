@@ -1,11 +1,11 @@
 <main class="container">
 	<div class="row">
-		<h2 class="text-center col py-1">Chansons de NOM_ALBUM</h2>
+		<h2 class="text-center col py-1">Chansons de {{albumName}}</h2>
 	</div>
 	<div class="row text-center mx-1">
-		<div class="col-2 text-center p-1">
+		<div class="col-2 text-center p-1" *ngFor="let song of tabSongs">
 			<div class="artist">
-				<h4>NOM_CHANSON</h4>
+				<h4>{{song.name}}</h4>
 				<a><button class="btn btn-light form-control mt-1">Écouter</button></a>
 			</div>
 		</div>

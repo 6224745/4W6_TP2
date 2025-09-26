@@ -11,4 +11,5 @@ export const routes: Routes = [
     {path: "album/:artistName/:artistId", component: AlbumComponent},
     {path: "show", component: ShowComponent},
     {path: "song", component: SongComponent},
+    {path: "song/:albumName/:albumId", component: SongComponent},
 ];

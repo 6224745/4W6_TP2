@@ -36,7 +36,6 @@ export class ArtistComponent {
     }
     this.artistName = ""
     localStorage.setItem("TabArtists", JSON.stringify(this.tabArtist));
-    console.log(this.tabArtist)
   }
 
   viderTab() {
