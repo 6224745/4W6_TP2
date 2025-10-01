@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 
 // METTRE VOTRE PROPRE CLÉ D'API !!
-const googleApiKey = "AIzaSyCRSatmnsJmu_cB49p-AfgRNaYKprmqpD4";
+const googleApiKey = "AIzaSyAxL17tzPJa__V3Z_2qMzUVWtingjP3AYw";
 
 @Injectable({
   providedIn: 'root'
