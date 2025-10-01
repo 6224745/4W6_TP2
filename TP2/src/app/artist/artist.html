@@ -18,7 +18,7 @@
 			        <div class="artist">
 				        <h4>{{ar.name}}</h4>
 				        <img [src]="ar.imageUrl" [alt]="ar.name" class="img-fluid">
-				        <button class="btn btn-light form-control mt-1">Concerts</button>
+				        <button class="btn btn-light form-control mt-1" [routerLink]="['/show', ar.name]">Concerts</button>
 				        <button class="btn btn-light form-control mt-1" [routerLink]="['/album', ar.name, ar.id]">Albums</button>
 			        </div>
 			    </div>

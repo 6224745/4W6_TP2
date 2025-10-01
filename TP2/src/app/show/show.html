@@ -1,21 +1,34 @@
 <main class="container">
 	<div class="row">
-		<h2 class="text-center col py-1">Concerts de NOM_ARTISTE</h2>
+		<h2 class="text-center col py-1">Concerts de {{artistName}}</h2>
 	</div>
 
 	<div class="row my-2 text-center justify-content-center">
 		<div class="col-auto artist">
-		    <img src="/images/carte.png" alt="Carte">
+		    <google-map class="map" [center]="centre" [zoom]="zoom" height="400px">
+				<map-marker *ngFor="let s of tabShows" [position]="{lat: calculerPosition(s.lat), lng: calculerPosition(s.long)}">
+				</map-marker>
+			</google-map>
 		</div>		  
 	</div>
-
+	<br>
+	<div *ngIf="tabShows.length == 0">
+		<p>Pas de concerts trouver pour {{artistName}}</p>
+	</div>
+	<br>
 	<div class="row mx-1">
-		<div class="col-3 p-1">
+		<div class="col-3 p-1" *ngFor="let show of tabShows">
 			<div class="artist">
-			  <h4>DATE ET HEURE</h4>
-			  <div>PAYS</div>
-			  <div>VILLE</div>
+			  <h4>{{show.date | date: 'd MMM, y, h:mm:ss a':'':'fr'}}</h4>
+			  <div>{{show.country}}</div>
+			  <div>{{show.city}}</div>
 			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col">
+			<button class="btn btn-light" [routerLink]="['/artist']">Retour aux artistes</button>
 		</div>
 	</div>
 </main>

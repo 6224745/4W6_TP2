@@ -7,7 +7,7 @@
 			<div class="artist">
 				<h4>{{alb.name}}</h4>
 				<img [src]="alb.image" [alt]="alb.name" class="img-fluid">
-				<button class="btn btn-light form-control mt-1" [routerLink]="['/song', alb.name, alb.id]">Chansons</button>
+				<button class="btn btn-light form-control mt-1" [routerLink]="['/song', artistName, alb.name, alb.id]">Chansons</button>
 			</div>
 		</div>
 		<div class="row">

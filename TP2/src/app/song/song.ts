@@ -10,7 +10,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 const youtubeURL = "https://www.youtube.com/embed/";
 @Component({
   selector: 'app-song',
-  imports: [FormsModule, RouterModule, CommonModule],
+  imports: [FormsModule, RouterModule, CommonModule, RouterModule],
   templateUrl: './song.html',
   styleUrl: '../../styles.css'
 })
@@ -20,6 +20,7 @@ export class SongComponent {
 
   albumId: string | null = null;
   albumName: string | null = null;
+  artistName: string | null = null;
   tabSongs: Song[] = [];
   videoId : string = "";
   videoUrl ?: SafeResourceUrl;
@@ -28,6 +29,7 @@ export class SongComponent {
     this.spotiService.connect();
     this.albumId = this.route.snapshot.paramMap.get("albumId");
     this.albumName = this.route.snapshot.paramMap.get("albumName");
+    this.artistName = this.route.snapshot.paramMap.get("artistName");
     this.getSongs();
   }
 
@@ -36,7 +38,7 @@ export class SongComponent {
   }
 
   async searchVideo(videoSearchText : string): Promise<void>{
-    this.videoId = await this.google.searchVideoId(videoSearchText);
+    this.videoId = await this.google.searchVideoId(this.artistName + " " + videoSearchText);
 
     this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(youtubeURL + this.videoId);
   }
