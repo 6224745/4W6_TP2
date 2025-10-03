@@ -1,31 +1,31 @@
 <main class="container">
 	<div class="row">
 		<div class="col-3 p-3" *ngIf="spotiService.spotifyToken != null">
-		  <h3>Ajouter un artiste</h3>
+		  <h3 translate>artist.titre1</h3>
 		    <form>
 		        <div class="form-group mb-2">
 				    <input type="text" name="artistName" [(ngModel)]="artistName" placeholder="Nana Mouskouri" class="form-control">
 			    </div>
 			    <div class="form-group">
-				    <input type="submit" (click)="getArtist()" value="Rechercher" class="btn btn-light">
+				    <input type="submit" (click)="getArtist()" [value]="'artist.button1' | translate" class="btn btn-light">
 			    </div>
 		    </form>
 		</div>
 		<div class="col p-3 text-center">
-		    <h2>Vos artistes</h2>
+		    <h2 translate>artist.titre2</h2>
 		    <div class="row">
 			    <div class="col-3 p-1" *ngFor="let ar of tabArtist">
 			        <div class="artist">
 				        <h4>{{ar.name}}</h4>
 				        <img [src]="ar.imageUrl" [alt]="ar.name" class="img-fluid">
-				        <button class="btn btn-light form-control mt-1" [routerLink]="['/show', ar.name]">Concerts</button>
+				        <button class="btn btn-light form-control mt-1" [routerLink]="['/show', ar.name]" translate>artist.button3</button>
 				        <button class="btn btn-light form-control mt-1" [routerLink]="['/album', ar.name, ar.id]">Albums</button>
 			        </div>
 			    </div>
 		    </div>
 		    <div class="row">
 			    <div class="col">
-			        <button class="btn btn-light" (click)="viderTab()">Vider les favoris</button>
+			        <button class="btn btn-light" (click)="viderTab()" translate>artist.button2</button>
 			    </div>
 		    </div>
 		</div>

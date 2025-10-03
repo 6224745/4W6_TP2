@@ -1,18 +1,13 @@
 <main class="container">
 	<div class="row">
-		<h2 class="text-center col py-1">Albums de {{artistName}}</h2>
+		<h2 class="text-center col py-1">{{'album.titre' | translate : {x : artistName} }}</h2>
 	</div>
 	<div class="row text-center mx-1">
 		<div class="col-2 text-center p-1" *ngFor="let alb of tabAlbums">
 			<div class="artist">
 				<h4>{{alb.name}}</h4>
 				<img [src]="alb.image" [alt]="alb.name" class="img-fluid">
-				<button class="btn btn-light form-control mt-1" [routerLink]="['/song', artistName, alb.name, alb.id]">Chansons</button>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-			    <button class="btn btn-light" [routerLink]="['/artist']">Retour aux artistes</button>
+				<button class="btn btn-light form-control mt-1" [routerLink]="['/song', artistName, alb.name, alb.id]" translate>album.song</button>
 			</div>
 		</div>
 	</div>

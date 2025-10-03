@@ -1,10 +1,10 @@
 <header class="container-fluid">
 	<div class="row">
-		<div class="col-auto align-self-center"><h1>Spot-moi</h1></div>
+		<div class="col-auto align-self-center"><h1 translate>app.titre1</h1></div>
 		<div class="col"></div>
-		<div class="col-auto py-2 nav"><h2><a>Vos artistes</a></h2></div>
+		<div class="col-auto py-2 nav"><h2><a [routerLink]="'/'" translate>app.titre2</a></h2></div>
 		<div class="col-auto py-2 align-self-center">
-		<select name="language" class="form-select">
+		<select name="language" class="form-select" [(ngModel)]="language" (change)="changeLanguage()">
 			<option value="fr">Français</option>
 			<option value="en">English</option>
 		</select>
@@ -19,7 +19,7 @@
 <footer class="container-fluid">
 	<div class="row py-1">
 		<div class="col text-left text-lg-center">
-		  <p>&copy; J'ai yoink le template de l'enseignant</p>
+		  <p translate>app.rights</p>
 		</div>
 	</div>
 </footer>

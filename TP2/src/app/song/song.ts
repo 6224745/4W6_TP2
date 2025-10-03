@@ -6,11 +6,12 @@ import { SpotifyService } from '../services/spotify';
 import { Song } from '../models/song';
 import { GoogleService } from '../services/google';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { TranslateModule } from '@ngx-translate/core';
 
 const youtubeURL = "https://www.youtube.com/embed/";
 @Component({
   selector: 'app-song',
-  imports: [FormsModule, RouterModule, CommonModule, RouterModule],
+  imports: [FormsModule, RouterModule, CommonModule, RouterModule, TranslateModule],
   templateUrl: './song.html',
   styleUrl: '../../styles.css'
 })

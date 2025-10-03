@@ -1,6 +1,6 @@
 <main class="container">
 	<div class="row">
-		<h2 class="text-center col py-1">Concerts de {{artistName}}</h2>
+		<h2 class="text-center col py-1">{{'show.titre' | translate : {x : artistName} }}</h2>
 	</div>
 
 	<div class="row my-2 text-center justify-content-center">
@@ -13,7 +13,7 @@
 	</div>
 	<br>
 	<div *ngIf="tabShows.length == 0">
-		<p>Pas de concerts trouver pour {{artistName}}</p>
+		<p translate>{{'show.none' | translate : {x : artistName} }}</p>
 	</div>
 	<br>
 	<div class="row mx-1">
@@ -23,12 +23,6 @@
 			  <div>{{show.country}}</div>
 			  <div>{{show.city}}</div>
 			</div>
-		</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col">
-			<button class="btn btn-light" [routerLink]="['/artist']">Retour aux artistes</button>
 		</div>
 	</div>
 </main>

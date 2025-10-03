@@ -1,0 +1,26 @@
+{
+  "artist": {
+    "titre1": "Ajouter un artiste",
+    "titre2": "Vos artistes",
+    "button1": "Rechercher",
+    "button2": "Vider liste d'artistes",
+    "button3": "Concerts"
+  },
+  "album": {
+    "song": "Chansons",
+    "titre": "Albums de {{x}}"
+  },
+  "song": {
+    "titre": "Chansons de l'album {{x}}",
+    "play": "Jouer"
+  },
+  "show": {
+    "titre": "Concerts de {{x}}",
+    "none": "Aucun concert à venir pour {{x}}"
+  },
+  "app":{
+    "titre1": "Spot-moi",
+    "titre2": "Vos artistes",
+    "rights": "© Tous droits réservés à Spotify, BandsInTown et Google"
+  }
+}

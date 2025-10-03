@@ -6,10 +6,11 @@ import { HttpClient } from '@angular/common/http';
 import { BandsintownService } from '../services/bandsintown';
 import { CommonModule, DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-show',
-  imports: [GoogleMapsModule, CommonModule, FormsModule, RouterModule, DatePipe],
+  imports: [GoogleMapsModule, CommonModule, FormsModule, RouterModule, DatePipe, TranslateModule],
   templateUrl: './show.html',
   styleUrl: '../../styles.css'
 })

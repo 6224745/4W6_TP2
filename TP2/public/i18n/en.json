@@ -1,0 +1,26 @@
+{
+  "artist": {
+    "titre1": "Add an artist",
+    "titre2": "Your artists",
+    "button1": "Search",
+    "button2": "Empty artist list",
+    "button3": "Shows"
+  },
+  "album": {
+    "song": "Songs",
+    "titre": "Albums of {{x}}"
+  },
+  "song": {
+    "titre": "Songs of the album {{x}}",
+    "play": "Play"
+  },
+  "show": {
+    "titre": "Shows of {{x}}",
+    "none": "No upcoming concerts for {{x}}"
+  },
+  "app":{
+    "titre1": "Spot-me",
+    "titre2": "Your artists",
+    "rights": "© All rights reserved to Spotify, BandsInTown and Google"
+  }
+}
